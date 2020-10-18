@@ -10,29 +10,16 @@
         <br>
         <br>
         <br>
+        {% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Mon premier post</a></h2>
-            <p>Aenean eu leo quam. <em>Pellentesque ornare sem lacinia quam venenatis vestibulum.</em> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        <br>
+        <br>
+        <br>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Mon second post</a></h2>
-            <strong><p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p></strong>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div>
-            <p>published: 21.10.2020, 18:25</p>
-            <h2><a href="">Mes villes préférées</a></h2>
-            <ul><li>Marseille</li><li>New york</li><li>Londres</li><li>Madrid</li><li>Amsterdam</li></ul>
-        
-        </div>
+    {% endfor %}
+
     </body>
 </html>
